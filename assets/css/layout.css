@@ -2,12 +2,16 @@
 	background: url('../images/bg.jpg') center center no-repeat;
 	background-size: cover;	
 	padding: 0;
+	border: 0;
 }
 .public-wrapper .container .row {
-	min-height: calc(100vh - 141px);
+	min-height: calc(100vh - 120px);
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
+}
+.footer {
+	border: 0;
 }
 
 
