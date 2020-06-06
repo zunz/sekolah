@@ -100,3 +100,15 @@
 .btn-box i {
 	color: #26b99a;
 }
+
+.module-head,
+.module {
+	border-radius: 0;
+}
+.module-head {
+	background-color: #26b99a;
+	color: #fff;
+}
+.module-head > * {
+	color: #fff;
+}
