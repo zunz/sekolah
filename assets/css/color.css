@@ -1,0 +1,32 @@
+.private-wrapper .container > .row {
+	background: #f7f7f7;
+}
+.private-wrapper .container > .row > .span3 {
+	background: #2A3F54;
+}
+.sidebar .widget {
+	border-top: 1px solid #172d44;	
+}
+.sidebar .widget:first-child {
+	border: 0;
+}
+.widget-menu,
+.widget-menu > li,
+.widget-menu > li > a {
+	background: transparent;
+}
+.widget-menu > li + li {
+	border: 0;
+}
+.widget-menu .menu-icon {
+	color: #fff;
+}
+
+.footer {
+	background: #172d44;
+}
+
+.footer,
+.footer a {	
+	color: #fff;
+}
