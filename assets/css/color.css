@@ -1,5 +1,5 @@
-.private-wrapper .container > .row {
-	background: #f7f7f7;
+body {
+	background-color: #f7f7f7;
 }
 .private-wrapper .container > .row > .span3 {
 	background: #2A3F54;
