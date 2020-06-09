@@ -23,11 +23,11 @@ Register - {{ parent() }}
 
                 <ul class="nav nav-tabs">
                     {% if get_pengaturan('registrasi-siswa', 'value') == 1 %}
-                    <li {{ (sebagai == 'siswa') ? 'class="active"' }}><a href="#register-siswa" data-toggle="tab">Sebagai siswa</a></li>
+                    <li {{ (sebagai == 'siswa') ? ' class="active"' }}><a href="#register-siswa" data-toggle="tab">Sebagai siswa</a></li>
                     {% endif %}
 
                     {% if get_pengaturan('registrasi-pengajar', 'value') == 1 %}
-                    <li {{ (sebagai == 'pengajar') ? 'class="active"' }}><a href="#register-pengajar" data-toggle="tab">Sebagai pengajar</a></li>
+                    <li {{ (sebagai == 'pengajar') ? ' class="active"' }}><a href="#register-pengajar" data-toggle="tab">Sebagai pengajar</a></li>
                     {% endif %}
                 </ul>
 

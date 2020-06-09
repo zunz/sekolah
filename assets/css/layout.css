@@ -1,7 +1,7 @@
 .public-wrapper {
 	background: url('../images/bg.jpg') center center no-repeat;
 	background-size: cover;	
-	padding: 0;
+	padding: 0 !important;
 	border: 0;
 }
 .public-wrapper .container .row {
@@ -9,6 +9,7 @@
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
+	padding: 30px 0;
 }
 
 .navbar .brand {
@@ -19,32 +20,33 @@
 	border: 0;
 }
 
-.login-box {
+.public-wrapper .module {
 	border: 0;
 	background: transparent;
+	margin-bottom: 0;
 }
-.login-box .module-body {
+.public-wrapper .module .module-body {
 	background: rgba(255, 255, 255, 0.88);
 }
-.login-box .form-vertical .control-group + .control-group {
+.public-wrapper .module .form-vertical .control-group + .control-group {
 	border: 0;
 	margin-top: 0;
 }
-.login-box .form-vertical .control-group + .control-group input {
+.public-wrapper .module .form-vertical .control-group + .control-group input {
 	margin: 0;
 }
-.login-box .form-vertical .control-group input[type="text"],
-.login-box .form-vertical .control-group input[type="email"],
-.login-box .form-vertical .control-group input[type="password"] {
+.public-wrapper .module .form-vertical .control-group input[type="text"],
+.public-wrapper .module .form-vertical .control-group input[type="email"],
+.public-wrapper .module .form-vertical .control-group input[type="password"] {
 	font-size: 16px;
 	height: 38px;
 	padding: 0 12px;
 }
 
-.login-box .form-vertical .control-group input::placeholder {
+.public-wrapper .module .form-vertical .control-group input::placeholder {
 	opacity: 0.8;
 }
-.login-box .module-foot a {
+.public-wrapper .module .module-foot a {
 	display: inline-block;
 	padding-top: 7px;
 	vertical-align: top;
@@ -123,6 +125,15 @@
 .well-small > b {
 	margin: -10px -10px -1px;	
 }
+
+.module .well-small {
+	padding: 12px 16px;
+}
+
+.module .well-small b {
+	margin: 0;
+}
+
 .well .table th,
 .well .table td {
 	padding: 7px 10px;
@@ -142,4 +153,8 @@
 }
 .module-head > * {
 	color: #fff;
+}
+.module-head a {
+	color: #ffffff;
+	text-decoration: underline;
 }
