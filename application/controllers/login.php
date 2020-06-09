@@ -148,7 +148,7 @@ class Login extends MY_Controller
         $this->session->set_userdata('hide_countdown', null);
         $_SESSION['login_' . APP_PREFIX] = null;
 
-        redirect('login/index');
+        redirect('login');
     }
 
     function pp()
