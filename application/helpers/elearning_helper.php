@@ -950,7 +950,7 @@ function kirim_email($nama_email, $to, $array_data = array())
     $smtp_pass = get_pengaturan('smtp-pass', 'value');
     $smtp_port = get_pengaturan('smtp-port', 'value');
     if (!empty($smtp_host)) {
-        $config['protocol']  = 'smtp';
+        $config['protocol']  = 'ssmtp';
         $config['smtp_host'] = $smtp_host;
         $config['smtp_user'] = $smtp_user;
         $config['smtp_pass'] = $smtp_pass;
@@ -966,7 +966,7 @@ function kirim_email($nama_email, $to, $array_data = array())
     $CI->email->from($email_server, '[E-learning] - ' . $nama_sekolah);
     $CI->email->subject($email_subject);
     $CI->email->message($email_body);
-    $CI->email->send();
+    $CI->email->send();	
     $CI->email->clear(true);
 
     return true;

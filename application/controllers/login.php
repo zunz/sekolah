@@ -398,7 +398,7 @@ class Login extends MY_Controller
                 $is_admin    = $retrieve['is_admin'],
                 $reset_kode  = $reset_kode
             );
-
+			
             # kirim email disini
             @kirim_email('email-template-link-reset', $retrieve['username'], array(
                 'link_reset' => site_url('login/reset_password/' . $reset_kode)
