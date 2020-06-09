@@ -689,7 +689,8 @@ function get_abjad($index)
  */
 function enurl_redirect($current_url)
 {
-    return str_replace(array("%2F","%5C"), array("%252F","%255C"), urlencode($current_url));
+    //return str_replace(array("%2F","%5C"), array("%252F","%255C"), urlencode($current_url));
+    return urlencode(base64_encode($current_url));
 }
 
 /**
@@ -700,7 +701,8 @@ function enurl_redirect($current_url)
  */
 function deurl_redirect($url)
 {
-    return urldecode(urldecode($url));
+    //return urldecode(urldecode($url));
+	return base64_decode(urldecode($url));
 }
 
 function pr($array) {
