@@ -201,6 +201,7 @@ function get_row_data($model, $func, $args = array(), $field_name = '')
  */
 function get_pengaturan($id, $get = null)
 {
+	$id = str_replace('_', '-', $id);
     $result = get_row_data('config_model', 'retrieve', array($id), $get);
     return $result;
 }

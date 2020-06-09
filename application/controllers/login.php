@@ -140,15 +140,17 @@ class Login extends MY_Controller
         $time_minus = strtotime("-2 minutes", time());
         $this->login_model->update_last_activity(get_sess_data('login', 'log_id'), $time_minus);
 
-        $this->session->set_userdata('filter_pengajar', null);
-        $this->session->set_userdata('filter_materi', null);
-        $this->session->set_userdata('filter_tugas', null);
-        $this->session->set_userdata('filter_siswa', null);
-        $this->session->set_userdata('mengerjakan_tugas', null);
-        $this->session->set_userdata('hide_countdown', null);
+        // $this->session->unset_userdata('filter_pengajar');
+        // $this->session->unset_userdata('filter_materi');
+        // $this->session->unset_userdata('filter_tugas');
+        // $this->session->unset_userdata('filter_siswa');
+        // $this->session->unset_userdata('mengerjakan_tugas');
+        // $this->session->unset_userdata('hide_countdown');
+		$this->session->userdata = array();
+		$this->session->sess_destroy();
         $_SESSION['login_' . APP_PREFIX] = null;
 
-        //redirect('login');
+        redirect('login');
     }
 
     function pp()
