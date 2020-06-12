@@ -963,7 +963,7 @@ function kirim_email($nama_email, $to, $array_data = array())
     $CI->email->initialize($config);
 
     $CI->email->to($to);
-    $CI->email->from($email_server, '[E-learning] - ' . $nama_sekolah);
+    $CI->email->from($email_server, 'E-learning - ' . $nama_sekolah);
     $CI->email->subject($email_subject);
     $CI->email->message($email_body);
     $CI->email->send();	
