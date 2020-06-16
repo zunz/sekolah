@@ -79,6 +79,7 @@ class Email extends MY_Controller
     function edit($id = '')
     {
         $retrieve = get_pengaturan($id);
+		$id = str_replace('_', '-', $id);
         if (empty($retrieve)) {
             redirect('email');
         }
@@ -88,13 +89,11 @@ class Email extends MY_Controller
                 'subject' => $_POST['subject'],
                 'body'    => $_POST['body'],
             );
-
-            $this->config_model->update($id, $retrieve['nama'], json_encode($value));
+            $this->config_model->update($id, $retrieve['nama'], json_encode($value));			
             redirect('email/edit/' . $id);
         }
 
         $retrieve_value = json_decode($retrieve['value'], 1);
-
         $data['template'] = array(
             'id'      => $retrieve['id'],
             'nama'    => $retrieve['nama'],

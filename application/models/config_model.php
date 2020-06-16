@@ -575,6 +575,7 @@ class Config_model extends CI_Model
      */
     public function update($id, $nama = null, $value = null)
     {
+		$id = str_replace('_', '-', $id);
         $this->db->update('pengaturan', array('nama' => $nama, 'value' => $value), array('id' => $id));
         return true;
     }
